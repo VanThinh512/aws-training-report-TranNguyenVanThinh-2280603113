@@ -15,21 +15,21 @@
     <title>VPC Endpoint Policies :: Internship Report</title>
 
     
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/nucleus.css?1782967872" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/fontawesome-all.min.css?1782967872" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hybrid.css?1782967872" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/featherlight.min.css?1782967872" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/perfect-scrollbar.min.css?1782967872" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/auto-complete.css?1782967872" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/atom-one-dark-reasonable.css?1782967872" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme.css?1782967872" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hugo-theme.css?1782967872" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/nucleus.css?1782969610" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/fontawesome-all.min.css?1782969610" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hybrid.css?1782969610" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/featherlight.min.css?1782969610" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/perfect-scrollbar.min.css?1782969610" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/auto-complete.css?1782969610" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/atom-one-dark-reasonable.css?1782969610" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme.css?1782969610" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hugo-theme.css?1782969610" rel="stylesheet">
     
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme-workshop.css?1782967872" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme-workshop.css?1782969610" rel="stylesheet">
     
     
 
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery-3.3.1.min.js?1782967872"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery-3.3.1.min.js?1782969610"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/lunr.min.js?1782967872"></script>
-<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/auto-complete.js?1782967872"></script>
+<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/lunr.min.js?1782969610"></script>
+<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/auto-complete.js?1782969610"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/aws-training-report-TranNguyenVanThinh-2280603113\/";
     
 </script>
-<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/search.js?1782967872"></script>
+<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/search.js?1782969610"></script>
  
   </div>
 
@@ -961,13 +961,13 @@
 }
 </code></pre><p><img src="/images/5-Workshop/5.5-Policy/policy2.png" alt="custom policy"></p>
 <p>Successfully customize policy</p>
-<p><img src="/static/images/5-Workshop/5.5-Policy/success.png" alt="success"></p>
+<p><img src="/images/5-Workshop/5.5-Policy/success.png" alt="success"></p>
 <ol start="5">
 <li>From your session on the Test-Gateway-Endpoint instance, test access to the S3 bucket you created in Part 1: Access S3 from VPC</li>
 </ol>
 <pre tabindex="0"><code>aws s3 ls s3://&lt;yourbucketname&gt;
 </code></pre><p>This command will return an error because access to this bucket is not permitted by your new VPC endpoint policy:</p>
-<p><img src="/static/images/5-Workshop/5.5-Policy/error.png" alt="error"></p>
+<p><img src="/images/5-Workshop/5.5-Policy/error.png" alt="error"></p>
 <ol start="6">
 <li>Return to your home directory on your EC2 instance <code>cd~</code></li>
 </ol>
@@ -975,13 +975,13 @@
 <li>Create a file <code>fallocate -l 1G test-bucket2.xyz </code></li>
 <li>Copy file to 2nd bucket <code>aws s3 cp test-bucket2.xyz s3://&lt;your-2nd-bucket-name&gt;</code></li>
 </ul>
-<p><img src="/static/images/5-Workshop/5.5-Policy/test2.png" alt="success"></p>
+<p><img src="/images/5-Workshop/5.5-Policy/test2.png" alt="success"></p>
 <p>This operation succeeds because it is permitted by the VPC endpoint policy.</p>
-<p><img src="/static/images/5-Workshop/5.5-Policy/test2-success.png" alt="success"></p>
+<p><img src="/images/5-Workshop/5.5-Policy/test2-success.png" alt="success"></p>
 <ul>
 <li>Then we test access to the first bucket by copy the file to 1st bucket <code>aws s3 cp test-bucket2.xyz s3://&lt;your-1st-bucket-name&gt;</code></li>
 </ul>
-<p><img src="/static/images/5-Workshop/5.5-Policy/test2-fail.png" alt="fail"></p>
+<p><img src="/images/5-Workshop/5.5-Policy/test2-fail.png" alt="fail"></p>
 <p>This command will return an error because access to this bucket is not permitted by your new VPC endpoint policy.</p>
 <h4 id="part-3-summary">Part 3 Summary:</h4>
 <p>In this section, you created a VPC endpoint policy for Amazon S3, and used the AWS CLI to test the policy. AWS CLI actions targeted to your original S3 bucket failed because you applied a policy that only allowed access to the second bucket you created. AWS CLI actions targeted for your second bucket succeeded because the policy allowed them. These policies can be useful in situations where you need to control access to resources through VPC endpoints.</p>
@@ -1641,19 +1641,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/clipboard.min.js?1782967872"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.min.js?1782967872"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.jquery.min.js?1782967872"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery.sticky.js?1782967872"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/featherlight.min.js?1782967872"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/highlight.pack.js?1782967872"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/clipboard.min.js?1782969610"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.min.js?1782969610"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.jquery.min.js?1782969610"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery.sticky.js?1782969610"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/featherlight.min.js?1782969610"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/highlight.pack.js?1782969610"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/modernizr.custom-3.6.0.js?1782967872"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/learn.js?1782967872"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/hugo-learn.js?1782967872"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/modernizr.custom-3.6.0.js?1782969610"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/learn.js?1782969610"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/hugo-learn.js?1782969610"></script>
 
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.css?1782967872" rel="stylesheet" />
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.js?1782967872"></script>
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.css?1782969610" rel="stylesheet" />
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.js?1782969610"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
