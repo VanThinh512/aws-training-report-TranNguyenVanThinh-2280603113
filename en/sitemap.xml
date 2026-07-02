@@ -2,6 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/1-worklog/1.2-week2/</loc>
+    <lastmod>2026-04-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.2-week2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/1-worklog/1.2-week2/"
+                />
+  </url><url>
+    <loc>https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/1-worklog/1.1-week1/</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.1-week1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/1-worklog/1.1-week1/"
+                />
+  </url><url>
     <loc>https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/3-blogsposted/3.1-blog1/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -117,32 +143,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
-                />
-  </url><url>
-    <loc>https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/1-worklog/1.1-week1/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.1-week1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/1-worklog/1.1-week1/"
-                />
-  </url><url>
-    <loc>https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/1-worklog/1.2-week2/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.2-week2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/1-worklog/1.2-week2/"
                 />
   </url><url>
     <loc>https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/1-worklog/1.3-week3/</loc>
