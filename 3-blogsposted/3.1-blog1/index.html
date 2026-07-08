@@ -15,21 +15,21 @@
     <title>Blog 1 :: Internship Report</title>
 
     
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/nucleus.css?1783506235" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/fontawesome-all.min.css?1783506235" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hybrid.css?1783506235" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/featherlight.min.css?1783506235" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/perfect-scrollbar.min.css?1783506235" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/auto-complete.css?1783506235" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/atom-one-dark-reasonable.css?1783506235" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme.css?1783506235" rel="stylesheet">
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hugo-theme.css?1783506235" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/nucleus.css?1783538032" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/fontawesome-all.min.css?1783538032" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hybrid.css?1783538032" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/featherlight.min.css?1783538032" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/perfect-scrollbar.min.css?1783538032" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/auto-complete.css?1783538032" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/atom-one-dark-reasonable.css?1783538032" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme.css?1783538032" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hugo-theme.css?1783538032" rel="stylesheet">
     
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme-workshop.css?1783506235" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme-workshop.css?1783538032" rel="stylesheet">
     
     
 
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery-3.3.1.min.js?1783506235"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery-3.3.1.min.js?1783538032"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/lunr.min.js?1783506235"></script>
-<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/auto-complete.js?1783506235"></script>
+<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/lunr.min.js?1783538032"></script>
+<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/auto-complete.js?1783538032"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/VanThinh512.github.io\/aws-training-report-TranNguyenVanThinh-2280603113\/";
     
 </script>
-<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/search.js?1783506235"></script>
+<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/search.js?1783538032"></script>
  
   </div>
 
@@ -799,7 +799,7 @@
     <br>
     <b> Last Updated </b> <br>
     <i>
-        <font color=orange>08-07-2026</font>
+        <font color=orange>09-07-2026</font>
     </i>
 </left>
 <left>
@@ -884,21 +884,34 @@
 
 
 
-	<h1 id="session-policies-in-amazon-eks-pod-identity">SESSION POLICIES IN AMAZON EKS POD IDENTITY</h1>
-<p>Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.</p>
-<p>Key points to know:</p>
+	<h1 id="securely-providing-database-credentials-to-lambda-functions-using-aws-secrets-manager">SECURELY PROVIDING DATABASE CREDENTIALS TO LAMBDA FUNCTIONS USING AWS SECRETS MANAGER</h1>
+<p>Using AWS Secrets Manager allows you to secure database credentials and pass them to AWS Lambda functions when connecting to Amazon RDS (MySQL). This solution eliminates the need to hardcode passwords in source code or pass them via environment variables, thereby protecting the backend database more securely. Additionally, the automatic periodic password rotation feature helps minimize security risks.</p>
+<p>The operational model of the solution includes</p>
 <ul>
-<li>A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.</li>
-<li>Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.</li>
-<li>Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.</li>
-<li>Supports both same-account and cross-account (via IAM role chaining).</li>
-<li>Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.</li>
-<li>Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.</li>
+<li>The client sends a Request to a RESTful API hosted on AWS API Gateway.</li>
+<li>API Gateway executes the corresponding AWS Lambda function.</li>
+<li>The Lambda function calls the AWS Secrets Manager API to retrieve database login information (username/password).</li>
+<li>The Lambda function uses that information to connect, query the Amazon RDS (MySQL) database, and return the results.</li>
 </ul>
-<p>This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).</p>
-<p>&hellip;Image&hellip;</p>
-<p>&hellip;Link&hellip;</p>
-<p>&hellip;Guide&hellip;</p>
+<p>Deployment process via CloudFormation:</p>
+<p>An AWS CloudFormation template is used to automate the provisioning of:</p>
+<ul>
+<li>An RDS MySQL database (db.t3.micro instance type).</li>
+<li>Two Lambda functions: One (LambdaRDSCFNInit) to create an Employees table and insert sample data immediately after stack creation; another (LambdaRDSTest) to query the employee count.</li>
+<li>A RESTful API Gateway with a GET method.</li>
+<li>A Secret resource in Secrets Manager with a randomly generated password.</li>
+</ul>
+<p>Key technical points:</p>
+<ul>
+<li><strong>Dynamic References:</strong> CloudFormation uses dynamic references to retrieve the password from Secrets Manager when creating the RDS instance. This ensures CloudFormation does not log or store the password in plain text.</li>
+<li><strong>Automatic Rotation:</strong> The AWS SecretsManager RotationSchedule resource is configured in coordination with a rotation Lambda function to automatically change the RDS database password every 30 days.</li>
+</ul>
+<p>Combining Lambda with AWS Secrets Manager helps automatically manage the lifecycle of sensitive information, reduces the operational cost of dedicated security infrastructure, and significantly enhances the security of Serverless applications.</p>
+<p><img src="../../images/3-BlogsPosted/blog1.1.jpg" alt="Image"></p>
+<ul>
+<li><strong>Post Link:</strong> <a href="https://www.facebook.com/groups/awsstudygroupfcj/posts/2187144322050528">AWS Study Group Facebook Post</a></li>
+<li><strong>Blog Link:</strong> <a href="https://aws.amazon.com/vi/blogs/security/how-to-securely-provide-database-credentials-to-lambda-functions-by-using-aws-secrets-manager/?fbclid=IwY2xjawS3AUNleHRuA2FlbQIxMABicmlkETFWanVNbWhjdjRGR0g4NEFxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHu4APzf301MYy7P9_61k2xiY8s_uPcppPQp_j0D1ebu-DsVcDHbhTa6vYkDd_aem_n-kVGqUxYdH_v_p1Btu0RA">How to securely provide database credentials to Lambda functions by using AWS Secrets Manager</a></li>
+</ul>
 
 
 
@@ -1532,19 +1545,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/clipboard.min.js?1783506235"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.min.js?1783506235"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.jquery.min.js?1783506235"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery.sticky.js?1783506235"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/featherlight.min.js?1783506235"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/highlight.pack.js?1783506235"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/clipboard.min.js?1783538032"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.min.js?1783538032"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.jquery.min.js?1783538032"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery.sticky.js?1783538032"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/featherlight.min.js?1783538032"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/highlight.pack.js?1783538032"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/modernizr.custom-3.6.0.js?1783506235"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/learn.js?1783506235"></script>
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/hugo-learn.js?1783506235"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/modernizr.custom-3.6.0.js?1783538032"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/learn.js?1783538032"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/hugo-learn.js?1783538032"></script>
 
-    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.css?1783506235" rel="stylesheet" />
-    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.js?1783506235"></script>
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.css?1783538032" rel="stylesheet" />
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.js?1783538032"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
