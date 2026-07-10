@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.161.1">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="thienlh@thienlu.com" />
+
+    <link rel="icon" href="/aws-training-report-TranNguyenVanThinh-2280603113/images/favicon.png" type="image/png">
+
+    <title>Sự kiện 3 :: Báo cáo thực tập</title>
+
+    
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/nucleus.css?1783649782" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/fontawesome-all.min.css?1783649782" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hybrid.css?1783649782" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/featherlight.min.css?1783649782" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/perfect-scrollbar.min.css?1783649782" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/auto-complete.css?1783649782" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/atom-one-dark-reasonable.css?1783649782" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme.css?1783649782" rel="stylesheet">
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/hugo-theme.css?1783649782" rel="stylesheet">
+    
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/css/theme-workshop.css?1783649782" rel="stylesheet">
+    
+    
+
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery-3.3.1.min.js?1783649782"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/4.3-event3/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/lunr.min.js?1783649782"></script>
+<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/auto-complete.js?1783649782"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/VanThinh512.github.io\/aws-training-report-TranNguyenVanThinh-2280603113\/\/vi";
+    
+</script>
+<script type="text/javascript" src="/aws-training-report-TranNguyenVanThinh-2280603113/js/search.js?1783649782"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/"
+  title="Nhật ký công việc"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/">
+     <b> 1. </b> Nhật ký công việc 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.6-week6/"
+  title="Worklog Tuần 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Worklog Tuần 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.5-week5/"
+  title="Worklog Tuần 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Worklog Tuần 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.4-week4/"
+  title="Worklog Tuần 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Worklog Tuần 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.3-week3/"
+  title="Worklog Tuần 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Worklog Tuần 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.2-week2/"
+  title="Worklog Tuần 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Worklog Tuần 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.1-week1/"
+  title="Worklog Tuần 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Worklog Tuần 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.7-week7/"
+  title="Worklog Tuần 7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Worklog Tuần 7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.8-week8/"
+  title="Worklog Tuần 8"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Worklog Tuần 8 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.9-week9/"
+  title="Worklog Tuần 9"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Worklog Tuần 9 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.10-week10/"
+  title="Worklog Tuần 10"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Worklog Tuần 10 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.11-week11/"
+  title="Worklog Tuần 11"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.11-week11/">
+     <b> 1.11. </b> Worklog Tuần 11 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.12-week12/"
+  title="Worklog Tuần 12"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/1-worklog/1.12-week12/">
+     <b> 1.12. </b> Worklog Tuần 12 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/2-proposal/"
+  title="Bản đề xuất"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/2-proposal/">
+     <b> 2. </b> Bản đề xuất 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/3-blogsposted/"
+  title="Các bài blogs đã đăng"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/3-blogsposted/">
+     <b> 3. </b> Các bài blogs đã đăng 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/3-blogsposted/3.1-blog1/"
+  title="Blog 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/3-blogsposted/3.1-blog1/">
+     <b> 3.1. </b> Blog 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/3-blogsposted/3.2-blog2/"
+  title="Blog 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/3-blogsposted/3.2-blog2/">
+     <b> 3.2. </b> Blog 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/3-blogsposted/3.3-blog3/"
+  title="Blog 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/3-blogsposted/3.3-blog3/">
+     <b> 3.3. </b> Blog 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/"
+  title="Các events đã tham gia"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/">
+     <b> 4. </b> Các events đã tham gia 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/4.1-event1/"
+  title="Sự kiện 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/4.1-event1/">
+     <b> 4.1. </b> Sự kiện 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/4.2-event2/"
+  title="Sự kiện 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/4.2-event2/">
+     <b> 4.2. </b> Sự kiện 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/4.3-event3/"
+  title="Sự kiện 3"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/4.3-event3/">
+     <b> 4.3. </b> Sự kiện 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/">
+     <b> 5. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.1-overview/"
+  title="Tổng quan &amp; Kiến trúc"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.1-overview/">
+     <b> 5.1. </b> Tổng quan &amp; Kiến trúc 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.2-prerequisite/"
+  title="Chuẩn bị"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.2-prerequisite/">
+     <b> 5.2. </b> Chuẩn bị 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.3-networking/"
+  title="Mạng"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.3-networking/">
+     <b> 5.3. </b> Mạng 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.4-data-identity/"
+  title="Dữ liệu &amp; Danh tính"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.4-data-identity/">
+     <b> 5.4. </b> Dữ liệu &amp; Danh tính 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.5-async-sqs/"
+  title="Hàng đợi bất đồng bộ (SQS)"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.5-async-sqs/">
+     <b> 5.5. </b> Hàng đợi bất đồng bộ (SQS) 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.6-compute-ecs/"
+  title="Tầng ứng dụng (ECS)"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.6-compute-ecs/">
+     <b> 5.6. </b> Tầng ứng dụng (ECS) 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.7-frontend-cdn/"
+  title="Frontend &amp; CDN"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.7-frontend-cdn/">
+     <b> 5.7. </b> Frontend &amp; CDN 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.8-monitoring/"
+  title="Giám sát &amp; Cảnh báo"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.8-monitoring/">
+     <b> 5.8. </b> Giám sát &amp; Cảnh báo 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.9-testing/"
+  title="Kiểm thử &amp; Xác thực"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.9-testing/">
+     <b> 5.9. </b> Kiểm thử &amp; Xác thực 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.10-security-iam/"
+  title="Bảo mật &amp; IAM"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.10-security-iam/">
+     <b> 5.10. </b> Bảo mật &amp; IAM 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.11-cleanup/"
+  title="Dọn dẹp"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/5.11-cleanup/">
+     <b> 5.11. </b> Dọn dẹp 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/6-self-evaluation/"
+  title="Tự đánh giá"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/6-self-evaluation/">
+     <b> 6. </b> Tự đánh giá 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/aws-training-report-TranNguyenVanThinh-2280603113/vi/7-feedback/"
+  title="Chia sẻ, đóng góp ý kiến"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/7-feedback/">
+     <b> 7. </b> Chia sẻ, đóng góp ý kiến 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="http://awsstudygroup.com"
+            ><i class='fab fa-aws'></i> AWS Study Group - Blog</a
+          >
+        </li>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"
+            ><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/4-eventparticipated/4.3-event3/"
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="https://VanThinh512.github.io/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/4.3-event3/"
+                  selected
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    <br>
+    <br>
+    <b> Last Updated </b> <br>
+    <i>
+        <font color=orange>10-07-2026</font>
+    </i>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+    <i>
+        <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud AI Journey</a>
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/aws-training-report-TranNguyenVanThinh-2280603113/vi/'>Báo cáo thực tập</a> > <a href='/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/'>Các events đã tham gia</a> > Sự kiện 3
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#thông-tin-sự-kiện">Thông tin sự kiện</a></li>
+        <li><a href="#nội-dung-sự-kiện">Nội dung sự kiện</a></li>
+        <li><a href="#bài-học-rút-ra--đóng-góp-cá-nhân">Bài học rút ra &amp; Đóng góp cá nhân</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Sự kiện 3
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="fcaj-community-day--game-dev-trên-aws-docker-graphrag--định-hướng-nghề-nghiệp">FCAJ Community Day – Game Dev trên AWS, Docker, GraphRAG &amp; Định hướng nghề nghiệp</h1>
+<h3 id="thông-tin-sự-kiện">Thông tin sự kiện</h3>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Tên sự kiện</strong></td>
+          <td>FCAJ Community Day</td>
+      </tr>
+      <tr>
+          <td><strong>Thời gian</strong></td>
+          <td>06/06/2026</td>
+      </tr>
+      <tr>
+          <td><strong>Địa điểm</strong></td>
+          <td>Trực tuyến (cộng đồng First Cloud AI Journey)</td>
+      </tr>
+      <tr>
+          <td><strong>Vai trò</strong></td>
+          <td>Người tham dự</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="nội-dung-sự-kiện">Nội dung sự kiện</h3>
+<p>Community Day lần ba gồm năm phần chia sẻ về phát triển game thời gian thực trên AWS, container hóa với Docker, GraphRAG cho LLM, AWS WAF kết hợp machine learning, và hành trình nghề nghiệp từ IT helpdesk đến Senior Sysadmin.</p>
+<hr>
+<h4 id="phần-1--game-búa-kéo-bao-multiplayer-trên-aws-diễn-giả-bạn-bảo">Phần 1 – Game Búa Kéo Bao Multiplayer trên AWS (Diễn giả: Bạn Bảo)</h4>
+<p>Bạn Bảo demo game <strong>Búa Kéo Bao</strong> multiplayer thời gian thực được xây dựng bằng engine <strong>Godot</strong> sử dụng kết nối WebSocket trên hạ tầng AWS:</p>
+<h5 id="kiến-trúc">Kiến trúc</h5>
+<ul>
+<li><strong>AWS Lambda Functions</strong> cho logic backend serverless</li>
+<li><strong>Amazon DynamoDB</strong> để quản lý trạng thái</li>
+<li><strong>WebSocket API</strong> cho giao tiếp hai chiều thời gian thực</li>
+</ul>
+<h5 id="quản-lý-trạng-thái-game-trên-dynamodb">Quản lý trạng thái game trên DynamoDB</h5>
+<p>Game xử lý nhiều trạng thái người chơi lưu trữ trên DynamoDB:</p>
+<ul>
+<li><code>Connected</code> — người chơi đang trực tuyến</li>
+<li><code>Disconnected</code> — người chơi đã rời đi</li>
+<li><code>Finding Match</code> — người chơi đang tìm đối thủ</li>
+<li><code>Choice</code> — người chơi đã ra đòn</li>
+</ul>
+<h5 id="cách-hoạt-động">Cách hoạt động</h5>
+<ul>
+<li><strong>Godot client</strong> xử lý đầu vào người dùng và gửi request tới server qua WebSocket.</li>
+<li><strong>Lambda backend</strong> xử lý ghép cặp, logic game, và xác định kết quả.</li>
+<li><strong>Demo:</strong> Hai client kết nối đồng thời, DynamoDB hiển thị 2 ID người chơi với trạng thái <code>matched</code>.</li>
+</ul>
+<h5 id="3-bài-học-kinh-nghiệm">3 bài học kinh nghiệm</h5>
+<ol>
+<li><strong>DynamoDB Scan tốn kém khi mở rộng</strong> — scan với hơn 1.000 người chơi đồng thời không đảm bảo tốc độ; lưu lượng và chi phí tăng đáng kể.</li>
+<li><strong>Lambda là stateless</strong> — mỗi lần gọi là độc lập, nên trạng thái game phải được lưu bên ngoài (DynamoDB).</li>
+<li><strong>Xử lý ngắt kết nối không mong muốn</strong> — người chơi có thể disconnect giữa chừng; hệ thống phải phát hiện và dọn dẹp các phiên bị bỏ rơi.</li>
+</ol>
+<h5 id="gợi-ý">Gợi ý</h5>
+<ul>
+<li>Đề cập <strong>AWS GameLift</strong> như dịch vụ quản lý chuyên dụng cho hosting game server multiplayer quy mô lớn.</li>
+</ul>
+<hr>
+<h4 id="phần-2--docker-công-nghệ-container-hóa-diễn-giả-bạn-bảo">Phần 2 – Docker: Công nghệ Container hóa (Diễn giả: Bạn Bảo)</h4>
+<p>Bạn Bảo giới thiệu Docker và các khái niệm container hóa:</p>
+<ul>
+<li><strong>Máy ảo (VM):</strong> Máy ảo là gì và lợi ích — cô lập hoàn toàn hệ điều hành nhưng tốn nhiều tài nguyên.</li>
+<li><strong>Container &amp; Docker:</strong> &ldquo;Build 1 lần, chạy ở đâu cũng được.&rdquo; Container chia sẻ kernel hệ điều hành host, giúp nhẹ hơn rất nhiều.</li>
+<li><strong>Ví dụ hiệu quả:</strong> Chạy 10 container trên 5 EC2 instance thay vì cần 10 EC2 instance riêng biệt.</li>
+<li><strong>Demo:</strong> Build và chạy một ứng dụng cơ bản sử dụng <code>docker build</code> triển khai trên 2 máy EC2.</li>
+</ul>
+<hr>
+<h4 id="phần-3--graphrag-retrieval-augmented-generation-tăng-cường-bằng-đồ-thị-diễn-giả-bạn-phát">Phần 3 – GraphRAG: Retrieval-Augmented Generation tăng cường bằng đồ thị (Diễn giả: Bạn Phát)</h4>
+<p>Bạn Phát trình bày GraphRAG như một bước tiến vượt qua RAG truyền thống:</p>
+<h5 id="rag-là-gì">RAG là gì?</h5>
+<ul>
+<li>Retrieval-Augmented Generation — truy xuất tài liệu liên quan để cung cấp context cho phản hồi LLM.</li>
+<li><strong>Hạn chế khiến RAG truyền thống bị vượt mặt:</strong> thiếu nhận thức về mối quan hệ giữa các thực thể, khó khăn trong suy luận đa bước.</li>
+</ul>
+<h5 id="tại-sao-graphrag">Tại sao GraphRAG?</h5>
+<ul>
+<li>GraphRAG hiểu được <strong>mối quan hệ giữa các thực thể</strong>, cung cấp context dễ hiểu và mạch lạc hơn cho LLM.</li>
+<li>Nắm bắt các kết nối giữa các khái niệm mà truy xuất tài liệu phẳng bỏ lỡ.</li>
+</ul>
+<h5 id="các-phương-pháp-triển-khai">Các phương pháp triển khai</h5>
+<table>
+  <thead>
+      <tr>
+          <th>Phương pháp</th>
+          <th>Mô tả</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Fully Managed</strong></td>
+          <td>Amazon Bedrock là engine quản lý tất cả; Amazon Neptune lưu trữ và quản lý toàn bộ dữ liệu đồ thị mà Bedrock sinh ra</td>
+      </tr>
+      <tr>
+          <td><strong>Custom Route</strong></td>
+          <td>Bedrock dùng để gọi model; Foundation Models (FM) do AWS xử lý; các pipeline xử lý tùy chỉnh được xây dựng riêng</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h4 id="phần-4--aws-waf--machine-learning-phát-hiện-tấn-công-mạng-diễn-giả-bạn-đại">Phần 4 – AWS WAF + Machine Learning phát hiện tấn công mạng (Diễn giả: Bạn Đại)</h4>
+<p>Bạn Đại trình bày giải pháp kết hợp AWS WAF với ML để phát hiện tấn công:</p>
+<ul>
+<li><strong>Giới hạn của AWS WAF:</strong> Phát hiện dựa trên luật đơn thuần không thể bắt hết các mẫu tấn công tinh vi.</li>
+<li><strong>Giải pháp:</strong> Kết hợp WAF với mô hình <strong>Machine Learning</strong> để phát hiện xâm nhập mạng (NIDS — Network Intrusion Detection System).</li>
+<li><strong>Thách thức tiền xử lý dữ liệu:</strong> Xử lý overfitting khi huấn luyện mô hình ML trên dữ liệu lưu lượng mạng.</li>
+<li><strong>Tập dữ liệu sử dụng:</strong> CES-CICIDS2018 — bộ dữ liệu chuẩn để đánh giá hệ thống phát hiện xâm nhập.</li>
+</ul>
+<hr>
+<h4 id="phần-5--từ-it-helpdesk-đến-senior-sysadmin-diễn-giả-anh-vinh">Phần 5 – Từ IT Helpdesk đến Senior Sysadmin (Diễn giả: Anh Vinh)</h4>
+<p>Anh Vinh chia sẻ hành trình nghề nghiệp và kinh nghiệm phỏng vấn thực tế:</p>
+<h5 id="hành-trình-nghề-nghiệp">Hành trình nghề nghiệp</h5>
+<ul>
+<li>Bắt đầu từ <strong>IT Helpdesk</strong> → phát triển thành <strong>System Administrator</strong> (chịu trách nhiệm quản lý OS và đảm bảo hệ thống hoạt động 24/7).</li>
+<li><strong>Sự cố thực tế:</strong> Gặp sự cố sập hệ thống khi các telesale user gây quá tải. Sự cố phần cứng (ổ cứng hỏng) yêu cầu xử lý nhanh — down các service không cần thiết và đưa dữ liệu lên server cloud để doanh nghiệp tiếp tục sử dụng hệ thống.</li>
+<li>Kinh nghiệm này thúc đẩy anh chuyển dịch sang <strong>Cloud/DevOps Engineer</strong>.</li>
+</ul>
+<h5 id="chuẩn-bị-phỏng-vấn">Chuẩn bị phỏng vấn</h5>
+<ul>
+<li>Ôn kiến thức theo <strong>roadmap</strong> có cấu trúc</li>
+<li>Chuẩn bị <strong>CV</strong> chỉn chu</li>
+<li>Research <strong>vị trí và công ty</strong> đó trên LinkedIn trước khi phỏng vấn</li>
+</ul>
+<h5 id="thực-tế-phỏng-vấn-30-kỹ-thuật-70-tư-duy-hệ-thống">Thực tế phỏng vấn: 30% kỹ thuật, 70% tư duy hệ thống</h5>
+<ul>
+<li><strong>Câu hỏi ví dụ:</strong> &ldquo;Nếu một sàn thương mại điện tử phản ánh về chức năng bị lỗi, troubleshoot thế nào?&rdquo;
+<ul>
+<li>Debug từ phía <strong>user</strong> → truy vết đến <strong>service/backend</strong> → mô tả cho manager → check <strong>log</strong> → nếu không phát hiện gì thì kiểm tra <strong>database</strong>.</li>
+</ul>
+</li>
+<li><strong>Câu hỏi ví dụ:</strong> &ldquo;Nếu có trang sản phẩm TMĐT thì deploy lên production thế nào? Hệ thống có hạ tầng thế nào?&rdquo;</li>
+</ul>
+<h5 id="lời-khuyên-quan-trọng">Lời khuyên quan trọng</h5>
+<ul>
+<li>Cần làm các <strong>dự án end-to-end</strong> để phát triển tư duy hệ thống và kỹ năng xử lý sự cố.</li>
+<li>Nhà tuyển dụng đánh giá <strong>tư duy giải quyết vấn đề</strong> cao hơn là đáp án kỹ thuật thuộc lòng.</li>
+</ul>
+<hr>
+<h3 id="bài-học-rút-ra--đóng-góp-cá-nhân">Bài học rút ra &amp; Đóng góp cá nhân</h3>
+<ul>
+<li><strong>Phát triển game serverless khả thi nhưng có đánh đổi:</strong> Chi phí DynamoDB scan và tính stateless của Lambda đòi hỏi quyết định kiến trúc cẩn thận cho game multiplayer thời gian thực.</li>
+<li><strong>Container cải thiện đáng kể hiệu quả tài nguyên:</strong> Docker cho phép chạy nhiều dịch vụ trên ít instance hơn, giảm chi phí hạ tầng.</li>
+<li><strong>GraphRAG &gt; RAG truyền thống:</strong> Thêm nhận thức về mối quan hệ thông qua cấu trúc đồ thị tạo ra context tốt hơn đáng kể cho LLM trong các truy vấn phức tạp.</li>
+<li><strong>Bảo mật nhiều lớp:</strong> Kết hợp WAF dựa trên luật với phát hiện xâm nhập dựa trên ML tạo ra thế bảo mật mạnh mẽ hơn.</li>
+<li><strong>Tư duy hệ thống hơn là thuộc lòng:</strong> Phỏng vấn và công việc thực tế đòi hỏi khả năng truy vết vấn đề end-to-end và suy nghĩ tổng thể về hạ tầng.</li>
+</ul>
+<hr>
+<h4 id="hình-ảnh-sự-kiện">Hình ảnh sự kiện</h4>
+<p><img src="../../../images/4-EventParticipated/Event-3/a1.png" alt="event">
+<img src="../../../images/4-EventParticipated/Event-3/6-6.png" alt="event"></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/4-eventparticipated/4.2-event2/" title="Sự kiện 2"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/aws-training-report-TranNguyenVanThinh-2280603113/vi/5-workshop/" title="Workshop" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/clipboard.min.js?1783649782"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.min.js?1783649782"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/perfect-scrollbar.jquery.min.js?1783649782"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/jquery.sticky.js?1783649782"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/featherlight.min.js?1783649782"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/highlight.pack.js?1783649782"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/modernizr.custom-3.6.0.js?1783649782"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/learn.js?1783649782"></script>
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/js/hugo-learn.js?1783649782"></script>
+
+    <link href="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.css?1783649782" rel="stylesheet" />
+    <script src="/aws-training-report-TranNguyenVanThinh-2280603113/mermaid/mermaid.js?1783649782"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>
